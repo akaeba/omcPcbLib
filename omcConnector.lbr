@@ -45,6 +45,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
@@ -5598,6 +5599,30 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <rectangle x1="14.605" y1="1.27" x2="15.875" y2="5.715" layer="51"/>
 <rectangle x1="17.145" y1="3.81" x2="18.415" y2="5.715" layer="51"/>
 </package>
+<package name="FLE-103">
+<description>&lt;p&gt;
+&lt;h3&gt;Samtec FLE&lt;/h3&gt;&lt;ul&gt;
+  &lt;li&gt;1.27mm&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.samtec.com/de/products/fle"&gt;Samtec&lt;/a&gt;&lt;/li&gt;
+&lt;/p&gt;</description>
+<wire x1="0.5842" y1="4.5212" x2="4.4958" y2="4.5212" width="0.127" layer="51"/>
+<wire x1="4.4958" y1="4.5212" x2="4.4958" y2="1.1938" width="0.127" layer="51"/>
+<wire x1="4.4958" y1="1.1938" x2="0.5842" y2="1.1938" width="0.127" layer="51"/>
+<wire x1="0.5842" y1="1.1938" x2="0.5842" y2="4.5212" width="0.127" layer="51"/>
+<smd name="1" x="1.27" y="4.699" dx="0.7366" dy="1.6764" layer="1"/>
+<smd name="2" x="1.27" y="1.016" dx="0.7366" dy="1.6764" layer="1"/>
+<smd name="3" x="2.54" y="4.699" dx="0.7366" dy="1.6764" layer="1"/>
+<smd name="4" x="2.54" y="1.016" dx="0.7366" dy="1.6764" layer="1"/>
+<smd name="5" x="3.81" y="4.699" dx="0.7366" dy="1.6764" layer="1"/>
+<smd name="6" x="3.81" y="1.016" dx="0.7366" dy="1.6764" layer="1"/>
+<text x="1.27" y="6.0325" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">1</text>
+<text x="6.35" y="0" size="0.8128" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+<text x="7.62" y="0" size="0.8128" layer="27" font="vector" ratio="15" rot="R90">&gt;VALUE</text>
+<wire x1="0" y1="0" x2="5.08" y2="0" width="0.127" layer="21"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="5.715" width="0.127" layer="21"/>
+<wire x1="5.08" y1="5.715" x2="0" y2="5.715" width="0.127" layer="21"/>
+<wire x1="0" y1="5.715" x2="0" y2="0" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SOLDPINVAL">
@@ -5962,7 +5987,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <gate name="6" symbol="PHDR" x="2.54" y="-2.54" addlevel="must"/>
 </gates>
 <devices>
-<device name="-2.54" package="BOXHD-06-2.54-S">
+<device name="-THT-2.54" package="BOXHD-06-2.54-S">
 <connects>
 <connect gate="1" pin="P$1" pad="1"/>
 <connect gate="2" pin="P$1" pad="2"/>
@@ -5979,7 +6004,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 </technology>
 </technologies>
 </device>
-<device name="-1.27" package="BOXHD-06-1.27-S">
+<device name="-THT-1.27" package="BOXHD-06-1.27-S">
 <connects>
 <connect gate="1" pin="P$1" pad="1"/>
 <connect gate="2" pin="P$1" pad="2"/>
@@ -5993,6 +6018,21 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <attribute name="ALTDIST#REICHELT#" value="SL 2X10G 1,27 " constant="no"/>
 <attribute name="DIST#REICHELT#" value="" constant="no"/>
 <attribute name="VALUE" value="2X3"/>
+</technology>
+</technologies>
+</device>
+<device name="-SMT-1.27" package="FLE-103">
+<connects>
+<connect gate="1" pin="P$1" pad="1"/>
+<connect gate="2" pin="P$1" pad="2"/>
+<connect gate="3" pin="P$1" pad="3"/>
+<connect gate="4" pin="P$1" pad="4"/>
+<connect gate="5" pin="P$1" pad="5"/>
+<connect gate="6" pin="P$1" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="FLE-103-01" constant="no"/>
 </technology>
 </technologies>
 </device>
