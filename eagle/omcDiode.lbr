@@ -2282,7 +2282,12 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <connect gate="G$1" pin="2" pad="C"/>
 </connects>
 <technologies>
-<technology name="39A">
+<technology name="-30V">
+<attribute name="DIST#REICHELT#" value="SM6T 30CA STM" constant="no"/>
+<attribute name="VALUE" value="30V" constant="no"/>
+<attribute name="VENDOR#" value="STM,SM6T30CA" constant="no"/>
+</technology>
+<technology name="-39V">
 <attribute name="DIST#REICHELT#" value="SM6T 39A STM" constant="no"/>
 <attribute name="VALUE" value="39V" constant="no"/>
 <attribute name="VENDOR#" value="STM,SM6T39A" constant="no"/>
