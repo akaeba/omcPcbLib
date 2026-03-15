@@ -5684,6 +5684,33 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <wire x1="2.54" y1="8.255" x2="2.54" y2="1.905" width="0.8128" layer="51"/>
 <wire x1="6.35" y1="8.255" x2="6.35" y2="1.905" width="0.8128" layer="51"/>
 </package>
+<package name="CONEC_42-01427">
+<description>&lt;p&gt;
+&lt;h3&gt;Female M8, 4-pin, angular, &lt;/h3&gt;&lt;ul&gt;
+  &lt;li&gt;Technology: THT&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://cdn-reichelt.de/documents/datenblatt/C152/CONEC_ID34023_42K1A954_E.pdf"&gt;Mechanical Reference (Reichelt)&lt;/a&gt;&lt;/il&gt;
+&lt;/p&gt;</description>
+<pad name="4" x="1.031875" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="2" x="-1.031875" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="1" x="-1.74625" y="-1.984375" drill="1" diameter="1.6764" shape="square"/>
+<pad name="3" x="1.74625" y="-1.984375" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="S1" x="-6.35" y="-1.42875" drill="3" shape="octagon"/>
+<pad name="S2" x="6.270625" y="-1.42875" drill="3" shape="octagon"/>
+<wire x1="-8.89" y1="1.27" x2="-8.89" y2="-9.525" width="0.4064" layer="21"/>
+<wire x1="8.89" y1="1.27" x2="-8.89" y2="1.27" width="0.4064" layer="21"/>
+<wire x1="8.89" y1="1.27" x2="8.89" y2="-9.525" width="0.4064" layer="21"/>
+<wire x1="8.89" y1="-9.525" x2="-8.89" y2="-9.525" width="0.4064" layer="21"/>
+<text x="-8.89" y="3.175" size="0.8128" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<text x="-8.89" y="1.905" size="0.8128" layer="27" font="vector" ratio="15">&gt;VALUE</text>
+<text x="-3.81" y="-2.54" size="0.8128" layer="21">1</text>
+<text x="3.175" y="-2.54" size="0.8128" layer="21">3</text>
+<text x="2.54" y="-0.635" size="0.8128" layer="21">4</text>
+<text x="-3.175" y="-0.635" size="0.8128" layer="21">2</text>
+<wire x1="6.35" y1="-9.525" x2="-6.35" y2="-9.525" width="0.4064" layer="51"/>
+<wire x1="-6.35" y1="-9.525" x2="-6.35" y2="-20.955" width="0.4064" layer="51"/>
+<wire x1="6.35" y1="-9.525" x2="6.35" y2="-20.955" width="0.4064" layer="51"/>
+<wire x1="6.35" y1="-20.955" x2="-6.35" y2="-20.955" width="0.4064" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SOLDPINVAL">
@@ -5763,6 +5790,20 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <symbol name="JP">
 <pin name="P$1" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
 <rectangle x1="0" y1="-0.508" x2="2.54" y2="0.508" layer="94"/>
+</symbol>
+<symbol name="SR">
+<description>&lt;p&gt;
+&lt;h2&gt;Shield Pin&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Connection Terminal on right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</description>
+<pin name="P$1" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
+<wire x1="-0.508" y1="-0.635" x2="-0.508" y2="0.635" width="0.254" layer="94" curve="-180"/>
+<text x="-2.54" y="0.508" size="1.4224" layer="95" rot="R180">&gt;PART</text>
+<wire x1="1.778" y1="0.635" x2="1.778" y2="-0.635" width="0.254" layer="94" curve="-180"/>
+<wire x1="-0.508" y1="0.635" x2="1.778" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="-0.635" x2="1.778" y2="-0.635" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -7230,6 +7271,44 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <technology name="-5S">
 <attribute name="DIST#REICHELT" value="MABPM 5S" constant="no"/>
 <attribute name="VALUE" value="DIN5" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="M8P4" prefix="X" uservalue="yes">
+<description>&lt;p&gt;
+&lt;h2&gt;M8, 4-pin, Female &lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Female socket M8x1 angled&lt;/li&gt;
+  &lt;li&gt;4-pol&lt;/li&gt;
+  &lt;li&gt;shielded&lt;/li&gt;
+  &lt;li&gt;backmounting&lt;/li&gt;
+  &lt;li&gt;Technology: THT&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+<gate name="G$1" symbol="PHDR" x="-2.54" y="7.62"/>
+<gate name="G$2" symbol="PHDR" x="-2.54" y="5.08"/>
+<gate name="G$3" symbol="PHDR" x="-2.54" y="2.54"/>
+<gate name="G$4" symbol="PHDR" x="-2.54" y="0"/>
+<gate name="G$5" symbol="SR" x="-2.54" y="-5.08"/>
+<gate name="G$6" symbol="SR" x="-2.54" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="CONEC_42-01427">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$2" pin="P$1" pad="2"/>
+<connect gate="G$3" pin="P$1" pad="3"/>
+<connect gate="G$4" pin="P$1" pad="4"/>
+<connect gate="G$5" pin="P$1" pad="S1"/>
+<connect gate="G$6" pin="P$1" pad="S2"/>
+</connects>
+<technologies>
+<technology name="-ANG">
+<attribute name="#VENDOR" value="CONEC,42-01427" constant="no"/>
+<attribute name="DIST#REICHELT#" value="CONEC 42-01427" constant="no"/>
+<attribute name="VALUE" value="M8,4p"/>
 </technology>
 </technologies>
 </device>
