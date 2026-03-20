@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="6.25" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -144,6 +144,26 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <wire x1="6.985" y1="-3.175" x2="6.985" y2="3.175" width="0.3048" layer="39"/>
 <wire x1="6.985" y1="3.175" x2="-6.985" y2="3.175" width="0.3048" layer="39"/>
 </package>
+<package name="883.1XX">
+<description>&lt;p&gt;
+&lt;h3&gt;ESKA Subminiature fuses&lt;/h3&gt;&lt;ul&gt;
+  &lt;li&gt;THT Fuse&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.eska-fuses.de/fileadmin/produkte/datenblaetter/ESKA-Kleinstsicherungen.pdf"&gt;Mechanical&lt;/a&gt;&lt;/il&gt;
+&lt;/p&gt;</description>
+<pad name="1" x="0" y="0" drill="0.8" diameter="1.4224" shape="octagon"/>
+<pad name="2" x="5.08" y="0" drill="0.8" diameter="1.4224" shape="octagon"/>
+<wire x1="-1.905" y1="2.54" x2="-1.905" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="2.54" x2="6.985" y2="2.54" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-2.54" x2="6.985" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="6.985" y1="2.54" x2="6.985" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="1.5875" y1="0.635" x2="1.5875" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.5875" y1="-0.635" x2="3.4925" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="3.4925" y1="-0.635" x2="3.4925" y2="0.635" width="0.127" layer="21"/>
+<wire x1="3.4925" y1="0.635" x2="1.5875" y2="0.635" width="0.127" layer="21"/>
+<wire x1="0.9525" y1="0" x2="4.1275" y2="0" width="0.127" layer="21"/>
+<text x="0.3175" y="1.27" size="0.8128" layer="27" font="vector" ratio="15">&gt;VALUE</text>
+<text x="-1.905" y="2.8575" size="0.8128" layer="27" font="vector" ratio="15">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="PTC">
@@ -189,7 +209,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FUSEPTC">
+<deviceset name="PTC">
 <gates>
 </gates>
 <devices>
@@ -200,93 +220,19 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 </device>
 </devices>
 </deviceset>
-<deviceset name="OMT" prefix="F" uservalue="yes">
-<description>&lt;h2&gt;OMT - Non resettable SMD Fuse&lt;/h2&gt;&lt;p&gt;
+<deviceset name="FUSE" prefix="F" uservalue="yes">
+<description>&lt;h2&gt;Non resettable Fuse&lt;/h2&gt;&lt;p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;b&gt;Describtion&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;OMT - Non resettable SMD Fuse&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;
     &lt;li&gt; Directly solderable on printed circuit boards&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;li&gt;&lt;b&gt;Standards&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;
     &lt;li&gt;UL 248-14&lt;/li&gt;
     &lt;li&gt;CSA C22.2 no. 248.14&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;li&gt;&lt;b&gt;Approvals&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;
     &lt;li&gt;UL File Number: E41599&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-&lt;b&gt;Technical Data&lt;/b&gt;
-&lt;style type="text/css"&gt;
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-xn4f{font-weight:bold;font-size:10px;background-color:#c0c0c0;text-align:center}
-.tg .tg-v4l8{font-size:10px;background-color:#efefef;text-align:center}
-.tg .tg-6b9p{font-weight:bold;font-size:10px;background-color:#c0c0c0}
-.tg .tg-glis{font-size:10px}
-.tg .tg-7kzq{font-size:10px;background-color:#efefef}
-.tg .tg-gozu{font-size:10px;text-align:center}
-&lt;/style&gt;
-&lt;table class="tg"&gt;
-  &lt;tr&gt;
-    &lt;th class="tg-6b9p"&gt;Type&lt;/th&gt;
-    &lt;th class="tg-xn4f"&gt;OMT125&lt;/th&gt;
-    &lt;th class="tg-xn4f"&gt;OMT250&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-7kzq"&gt;Rated Voltage&lt;/td&gt;
-    &lt;td class="tg-v4l8"&gt;125 VAC/DC&lt;/td&gt;
-    &lt;td class="tg-v4l8"&gt;125 - 250VAC, 125 VDC&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-glis"&gt;Rated Current&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;0.25 - 5 A&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;0.75 - 5A&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-7kzq"&gt;Breaking Capacity&lt;/td&gt;
-    &lt;td class="tg-v4l8"&gt;100 A&lt;/td&gt;
-    &lt;td class="tg-v4l8"&gt;50A - 100A&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-glis"&gt;Characteristic&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;Time-Lag T&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;Time-Lag T&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-7kzq"&gt;Mounting&lt;/td&gt;
-    &lt;td class="tg-v4l8" colspan="2"&gt;PCB,SMT&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-glis"&gt;Admissible Ambient Air Temp.&lt;/td&gt;
-    &lt;td class="tg-gozu" colspan="2"&gt;-40 °C to 85 °C&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-7kzq"&gt;Climatic Category&lt;/td&gt;
-    &lt;td class="tg-v4l8" colspan="2"&gt;40/085/21 acc. to IEC 60068-1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-glis"&gt;Material: Housing&lt;/td&gt;
-    &lt;td class="tg-gozu" colspan="2"&gt;Thermoplastic, UL 94V-0&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-7kzq"&gt;Material: Terminals&lt;/td&gt;
-    &lt;td class="tg-v4l8" colspan="2"&gt;Tin-Plated Copper Alloy&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-glis"&gt;Datasheet&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;&lt;a href="http://www.schurter.ch/bundles/snceschurter/epim/_ProdPool_/newDS/de/typ_OMT_125.pdf"&gt;Schurter&lt;/a&gt;&lt;br&gt;&lt;a href="http://cdn-reichelt.de/documents/datenblatt/C400/typ_OMT_125.pdf"&gt;Reichelt&lt;/a&gt;&lt;/td&gt;
-    &lt;td class="tg-gozu"&gt;&lt;a href="http://www.schurter.ch/bundles/snceschurter/epim/_ProdPool_/newDS/de/typ_OMT.pdf"&gt;Schurter&lt;/a&gt;&lt;br&gt;&lt;a href="http://cdn-reichelt.de/documents/datenblatt/C400/OMT.pdf"&gt;Reichelt&lt;/a&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;/p&gt;
-
-
-&lt;h3&gt;Distributor&lt;/h3&gt;&lt;p&gt;
-&lt;ul&gt;
-   &lt;li&gt;Reichelt: avialable&lt;/li&gt;
-   &lt;li&gt;Conrad:&lt;/li&gt;
-   &lt;li&gt;Digi-Key:&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;ESKA Subminiature fuses&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;
+    &lt;li&gt;Current: 100 mA - 10 A&lt;/li&gt;
+    &lt;li&gt;Breaking capacity: 130A&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/ul&gt;</description>
 <gates>
 <gate name="G$1" symbol="FUSE" x="0" y="0"/>
@@ -410,6 +356,17 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <attribute name="DIST#REICHELT#" value="OMT 250 2,0A" constant="no"/>
 <attribute name="VALUE" value="T 2A0"/>
 <attribute name="VENDOR#" value="Schurter_3403.0119.11" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-883.100" package="883.1XX">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
