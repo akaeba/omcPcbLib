@@ -668,7 +668,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <technologies>
 <technology name="-12VDC">
 <attribute name="DIST#REICHELT#" value="FIN 40.52.9 12V" constant="no"/>
-<attribute name="VALUE" value="12V" constant="no"/>
+<attribute name="VALUE" value="FIN 40.52" constant="no"/>
 </technology>
 </technologies>
 </device>
