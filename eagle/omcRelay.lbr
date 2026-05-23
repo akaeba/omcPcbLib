@@ -536,7 +536,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 </device>
 </devices>
 </deviceset>
-<deviceset name="30.22.9" prefix="K" uservalue="yes">
+<deviceset name="30.22" prefix="K" uservalue="yes">
 <description>&lt;p&gt;
 &lt;h2&gt;Finder Series 30 -  Dual-In-Line-Relais 1,25 A&lt;/h2&gt;&lt;p&gt;&lt;ul&gt;
   &lt;li&gt;Power: 125VA&lt;/li&gt;
@@ -554,8 +554,8 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 &lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="K" x="0" y="12.7" addlevel="must"/>
-<gate name="G$2" symbol="U" x="0" y="0" addlevel="always"/>
-<gate name="G$3" symbol="U" x="0" y="-15.24" addlevel="always"/>
+<gate name="G$2" symbol="U" x="0" y="0"/>
+<gate name="G$3" symbol="U" x="0" y="-15.24"/>
 </gates>
 <devices>
 <device name="" package="THT_7M62M_7M62M_5M08M">
