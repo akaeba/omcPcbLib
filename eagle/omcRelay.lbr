@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -632,6 +632,43 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <attribute name="DIST#REICHELT#" value="NA 05W K" constant="no"/>
 <attribute name="VALUE" value="NA-5V" constant="no"/>
 <attribute name="VENDOR#" value="Fujitsu,NAA-05W-K" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="40.52" prefix="K" uservalue="yes">
+<description>&lt;p&gt;
+&lt;h2&gt;Finder Series 40 -  Print-Relais 8 - 10 - 16 A&lt;/h2&gt;&lt;p&gt;&lt;ul&gt;
+  &lt;li&gt;Current: 8A continous, 16A switch-on&lt;/li&gt;
+  &lt;li&gt;Voltage: 250V&lt;/li&gt;
+  &lt;li&gt;Contact: AgNi&lt;/li&gt;
+  &lt;li&gt;Datasheet&lt;/li&gt;&lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://cdn-reichelt.de/documents/datenblatt/C300/Bistabile_Relais_Finder.pdf"&gt;Reichelt&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="K" x="0" y="7.62" addlevel="always"/>
+<gate name="G$2" symbol="U" x="0" y="-10.16" swaplevel="1"/>
+<gate name="G$3" symbol="U" x="0" y="-27.94" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="THT_7M5M_20MM_5MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="8"/>
+<connect gate="G$2" pin="O" pad="2"/>
+<connect gate="G$2" pin="P" pad="3"/>
+<connect gate="G$2" pin="S" pad="4"/>
+<connect gate="G$3" pin="O" pad="7"/>
+<connect gate="G$3" pin="P" pad="6"/>
+<connect gate="G$3" pin="S" pad="5"/>
+</connects>
+<technologies>
+<technology name="-12VDC">
+<attribute name="DIST#REICHELT#" value="FIN 40.52.9 12V" constant="no"/>
+<attribute name="VALUE" value="12V" constant="no"/>
 </technology>
 </technologies>
 </device>
