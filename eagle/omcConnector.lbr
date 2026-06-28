@@ -22,14 +22,14 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
@@ -5793,6 +5793,20 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <wire x1="12.67875" y1="4.3135" x2="11.13375" y2="4.3135" width="0.127" layer="21"/>
 <wire x1="10.16" y1="8.255" x2="10.16" y2="1.905" width="0.8128" layer="51"/>
 </package>
+<package name="PL38W19D1X1">
+<description>&lt;p&gt;
+&lt;h3&gt;Pad and Hole&lt;/h3&gt;&lt;ul&gt;
+  &lt;li&gt;Pad Length: 3.81mm&lt;/li&gt;
+  &lt;li&gt;Pad Width: 1.93mm&lt;/li&gt;
+  &lt;li&gt;Drill: 1mm&lt;/li&gt;
+  &lt;li&gt;Grid: 2.54mm&lt;/li&gt;
+&lt;/p&gt;</description>
+<text x="-3.175" y="1.27" size="1.27" layer="27" font="vector">&gt;NAME</text>
+<text x="-3.175" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+<pad name="P$1" x="0" y="0" drill="1" diameter="1.778" shape="octagon"/>
+<rectangle x1="-1.905" y1="-0.9525" x2="1.905" y2="0.9525" layer="1"/>
+<rectangle x1="-2.0240625" y1="-1.0715625" x2="2.0240625" y2="1.0715625" layer="29"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SOLDPINVAL">
@@ -5889,7 +5903,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="1X1S" prefix="X">
+<deviceset name="1X1S" prefix="X" uservalue="yes">
 <description>&lt;p&gt;
 &lt;h2&gt;Single Side X1 Soldering Connector - Footprint only&lt;/h2&gt;
 &lt;ul&gt;
@@ -5973,6 +5987,16 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <attribute name="REICHELT#" value="" constant="no"/>
 <attribute name="VALUE" value="Footprint" constant="no"/>
 <attribute name="VENDOR#" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-PL38W19D1" package="PL38W19D1X1">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="Footprint" constant="no"/>
 </technology>
 </technologies>
 </device>
